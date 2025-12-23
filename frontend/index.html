@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Voice Note Summarizer</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Floating Icons Background -->
+ <div class="floating-icons">
+  <span class="icon">🎧</span>
+  <span class="icon">📝</span>
+  <span class="icon">🔊</span>
+  <span class="icon">📄</span>
+  <span class="icon">✨</span>
+  <span class="icon">🎤</span>
+  <span class="icon">📊</span>
+  <span class="icon">🧠</span>
+</div>
+
+  <main class="app">
+
+    <!-- Upload Section -->
+    <section class="upload-section" id="uploadSection">
+      <h1>AI Voice Note Summarizer</h1>
+      <p>Upload an audio note and get a smart summary instantly</p>
+
+      <label class="upload-btn">
+        Choose Audio File
+        <input type="file" id="audioFile" accept="audio/*" hidden />
+      </label>
+
+      <button class="analyze-btn" onclick="uploadAudio()">Analyze Audio</button>
+
+      <div class="loader" id="loader">Analyzing audio…</div>
+      <div class="upload-status" id="uploadStatus"></div>
+
+    </section>
+
+    <!-- Result Section -->
+    <section class="result-section hidden" id="resultSection">
+
+      <div class="card">
+        <h2>Summary</h2>
+        <p id="summaryText"></p>
+      </div>
+
+      <div class="card">
+        <h2>Key Points</h2>
+        <ul id="bulletPoints"></ul>
+      </div>
+
+      <div class="card">
+        <h2>Keywords</h2>
+        <div class="keywords" id="keywords"></div>
+      </div>
+
+      <button class="back-btn" onclick="goBack()">Analyze Another Audio</button>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
