@@ -2,7 +2,7 @@
 An end-to-end AI-powered web application that converts voice notes into concise summaries, key bullet points, and important keywords.
 Designed to help users quickly understand long audio recordings without listening to the entire file.
 This project integrates speech-to-text, natural language processing, and a modern animated frontend.
-
+---
 
 ## Features: 
 -  Upload any voice note (audio file)
@@ -13,25 +13,29 @@ This project integrates speech-to-text, natural language processing, and a moder
 -  Modern animated UI with smooth transitions
 -  Frontend–backend integration using REST APIs
 
-
+---
 ## Tech Stack:
-**Frontend**
+### Frontend
 HTML5
 CSS3 (animations, gradients, glassmorphism)
 JavaScript (Vanilla JS)
-**Backend**
+
+### Backend
 Python
 FastAPI
 Uvicorn
-**AI / ML**
+
+### AI / ML
 Whisper (Speech-to-Text)
 Hugging Face Transformers
 BART Large CNN (Summarization)
 KeyBERT (Keyword Extraction)
-**Utilities**
+
+### Utilities
 FFmpeg – audio conversion
 Git & GitHub – version control
 
+---
 
 ## How the Project Works:
 1. User uploads an audio file through the web interface  
@@ -43,7 +47,10 @@ Git & GitHub – version control
    - Keywords
 5. Results are displayed with animated UI elements
 
-##System Architecture:
+---
+
+## System Architecture:
+```
 User Audio Upload
         ↓
  Audio Normalization (FFmpeg)
@@ -56,9 +63,11 @@ User Audio Upload
    └── Keyword Extraction
         ↓
  Frontend Visualization
-
+```
+---
 
 ## Project Structure:
+```
 VoiceSummarizer/
 │
 ├── backend/
@@ -75,7 +84,9 @@ VoiceSummarizer/
 ├── uploads/
 ├── requirements.txt
 └── README.md
+```
 
+---
 
 ## Example Output:
 -Summary:
@@ -86,15 +97,20 @@ VoiceSummarizer/
 -Keywords:
  AI-extracted relevant terms from the speech
 
+---
 
 ## How to Run the Project:
 1. Clone the Repository
-2. Create Virtual Environment: python -m venv venv source venv/bin/activate
-    # Windows: venv\Scripts\activate
+2. Create Virtual Environment:
+   ```
+      python -m venv venv source venv/bin/activate
+      venv\Scripts\activate
+   ```
 3. Install Dependencies: pip install -r requirements.txt
 4. Run the Backend: uvicorn backend.main:app --reload
 5. Open Frontend: Open frontend/index.html directly in your browser.
 
+---
 
 ## Example Use Case:
 Summarizing lecture recordings
@@ -102,27 +118,33 @@ Quickly reviewing meeting notes
 Extracting key ideas from voice journals
 Converting long voice notes into readable content
 
+---
 
 ## Performance Notes:
 Runs completely on CPU
 Best suited for short to medium audio files
 No internet or paid API dependency after setup
 
+---
 
 ## Limitations:
 Not deployed (runs locally)
 Long audio files may take more processing time
 English language focused
 
+---
 
 ## Project Status:
 - Completed
 - Working Locally
 
 
+---
+
 ## Author:
 Palak Vastrakar 
 
+---
 
 ## Acknowledgements:
 OpenAI Whisper
